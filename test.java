@@ -1,3 +1,4 @@
+// only for testing purpose...
 import java.util.*;
 public class test {
     public static void countduplicate(int arr[]) {
