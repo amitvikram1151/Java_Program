@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": [
+        ".",
+        "1_Variable_and_Data_Types",
+        "2_Operators",
+        "3_Conditional_Statements",
+        "4_Loops",
+        "5_Pattern",
+        "6_Function_and_Methods",
+        "7_Arrays_1D_Part_1",
+        "8_Arrays_1D_Part_2",
+
+    ],
+    "java.project.referencedLibraries": [],
+    "C_Cpp.errorSquiggles": "disabled"
+    
+}
