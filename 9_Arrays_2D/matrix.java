@@ -32,6 +32,7 @@ public class matrix{
         }
         boolean result = search(matrix, 5);
         System.out.println("result :" + result);
+        sc.close();
 
     }
 }
