@@ -1,6 +1,8 @@
 import java.util.*;
 
 public class LargestString {
+
+    //checking only one largest
     public static String checkLargestString(String str[]){
         String largest = "";
         for(int i = 0; i < str.length; i++) {
