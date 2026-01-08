@@ -23,7 +23,7 @@ public class test {
     }
     public static void main(String[] args) {
         int arr[] = {1,2,3,3,4,5};
-        // countduplicate(arr);
+        countduplicate(arr);
         char ch = '8';
         System.out.println(ch + "");                     // "8"
         System.out.println(Integer.parseInt(ch + ""));   // 8
