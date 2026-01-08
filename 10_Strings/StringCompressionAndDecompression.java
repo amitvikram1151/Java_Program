@@ -26,16 +26,39 @@ public class StringCompressionAndDecompression {
         StringBuilder sb = new StringBuilder("");
         int count = 0;
         for(int i = 0; i < str.length(); i++) {
-            sb.append(Character.isLetter(str.charAt(i)));
             char ch = str.charAt(i);
-            i++;
-            if(Character.isDigit(str.charAt(i))) {
-                count = str.charAt(i);
-                for(int j = 0; j < count; j++) {
-                    sb.append(ch);
+            if(Character.isLetter(str.charAt(i))) {
+                sb.append(ch);
+            } else if(Character.isDigit(str.charAt(i))) {
+                count = Character.getNumericValue(ch);
+                for(int j = 0; j < count-1; j++) {
+                    sb.append(str.charAt(i-1));
+                }
+            }   
+        }
+        return sb.toString();
+    }
+    public static String optimisedDecompress(String str) {
+        StringBuilder sb = new StringBuilder("");
+        char lastchar = 0;
+        int count = 0;
+        for(int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if(Character.isLetter(ch)) {
+                sb.append(ch);
+                lastchar = ch;
+            } else if (Character.isDigit(ch)) {
+                count = 0;
+                while(i < str.length() && Character.isDigit(str.charAt(i))) {
+                    count = count * 10 + (str.charAt(i) - '0');
+                    i++;
+                }
+                i--;
+                for(int j = 0; j < count - 1; j++) {
+                    sb.append(lastchar);
                 }
             }
-            
+
         }
         return sb.toString();
     }
@@ -44,6 +67,7 @@ public class StringCompressionAndDecompression {
         String str1 = "aaabbcccdd";
         //System.out.println(comprressionString(str1));
         String str2 = "a3b2c3d2";
-        System.out.println(decompressionString(str2));
+        // System.out.println(decompressionString(str2));
+        System.out.println(optimisedDecompress(str2));
     }
 }
