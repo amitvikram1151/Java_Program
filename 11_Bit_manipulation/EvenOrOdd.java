@@ -23,6 +23,7 @@ public class EvenOrOdd {
         int collectBinary = convertBinary(n);
         Boolean result = checkEvenOrOdd(collectBinary);
         System.out.println(result);
+        sc.close();
 
 
     }
