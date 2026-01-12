@@ -12,8 +12,15 @@ public class EvenOrOdd {
         return binaryForm;
     }
 
-    public static Boolean checkEvenOrOdd(int binaryForm) {
-       return (binaryForm & 1) == 1;
+    public static String checkEvenOrOdd(int binaryForm) {
+        StringBuilder sb = new StringBuilder("");
+        int n = binaryForm;
+        if((n & 1) == 1) {
+            sb.append("odd number");
+        } else {
+            sb.append("even number");
+        }
+        return sb.toString();
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -21,7 +28,7 @@ public class EvenOrOdd {
         int n = sc.nextInt();
 
         int collectBinary = convertBinary(n);
-        Boolean result = checkEvenOrOdd(collectBinary);
+        String result = checkEvenOrOdd(collectBinary);
         System.out.println(result);
         sc.close();
 
