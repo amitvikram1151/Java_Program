@@ -3,13 +3,16 @@ import java.util.Scanner;
 public class EvenOrOdd {
 
     public static int convertBinary(int n ) {
-        int binaryForm = 0;
+        int binNum = 0;
+        int pow = 0;
         while(n > 0) {
-            int lastDigit = n % 2;
-            binaryForm = (binaryForm * 10) + lastDigit;
+            int rem = n % 2;
+           // binaryForm = (binaryForm * 10) + rem;
+           binNum = binNum + (rem * (int)Math.pow(10,pow));
             n = n / 2;
+            pow++;
         }
-        return binaryForm;
+        return binNum;
     }
 
     public static String checkEvenOrOdd(int binaryForm) {
