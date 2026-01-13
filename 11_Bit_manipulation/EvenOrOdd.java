@@ -34,7 +34,8 @@ public class EvenOrOdd {
         String result = checkEvenOrOdd(collectBinary);
         System.out.println(result);
         sc.close();
-
+        // this code is perfect after saying lots of things
+        
 
     }
 }
