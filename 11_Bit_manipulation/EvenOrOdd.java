@@ -38,4 +38,3 @@ public class EvenOrOdd {
 
     }
 }
-// all the work will doe from tomorrow
