@@ -47,8 +47,8 @@ public class BitManipulation2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(getIthBit(10, 3));
-        System.out.println(setIthBit(6, 3));
+       // System.out.println(getIthBit(10, 3));
+        //System.out.println(setIthBit(6, 3));
         System.out.println(clearIthBit(10, 1));
         System.out.println(clearLastBit(15, 2));
         System.out.println(clearRangeBit(10, 2, 4));
