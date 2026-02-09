@@ -32,4 +32,3 @@ class Fish extends Animal{
         System.out.println("swims in water");
     }
 }
-//dance of bansti
