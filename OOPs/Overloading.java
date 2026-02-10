@@ -6,6 +6,7 @@ public static void main(String[] args) {
     System.out.println(calc.sum(2, 4, 6));
 }
 }
+//compile time polymorphism
 class Calculator {
     int sum(int a, int b) {
         return a + b;
