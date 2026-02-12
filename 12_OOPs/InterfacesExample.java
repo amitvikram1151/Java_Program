@@ -3,7 +3,7 @@ public class InterfacesExample {
         Queen q = new Queen();
         q.move();
         Rook r = new Rook();
-        q.move();
+        r.move();
         pawn p = new pawn();
         p.move();
     }
