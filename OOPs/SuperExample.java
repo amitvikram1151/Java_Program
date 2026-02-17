@@ -33,4 +33,3 @@ class Dog extends Animal {
         super.sound(); // parent method
     }
 }
-
