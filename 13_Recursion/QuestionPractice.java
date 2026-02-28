@@ -43,7 +43,40 @@ public class QuestionPractice {
 
     //problem 4
 
-    
+    /*
+    we are given a string s we need to find the count of all continfous substring
+    starting and ending eith same charcter
+    */
+
+    public static int countSubstring(String str) {
+        int freq[] = new int[26];
+
+        for(int i = 0; i < str.length(); i++) {
+            freq[str.charAt(i) - 'a']++;
+        }
+        int count = 0;
+
+        for(int i = 0; i < 26; i++) {
+            if(freq[i] > 0){
+                count += freq[i] *(freq[i] + 1) / 2;
+            }
+        }
+
+        return count;
+    }
+
+    public static void printAndCount(String str) {
+        int count = 0;
+        for(int i = 0; i < str.length(); i++) {
+            for(int j = i; j < str.length(); j++) {
+                if(str.charAt(i) == str.charAt(j)) {
+                    System.out.println(str.substring(i, j+1));
+                    count++;
+                }
+            }
+        }
+        System.out.println("total substring is : " + count);
+    }
 
 
     // main method
@@ -60,5 +93,9 @@ public class QuestionPractice {
         //problem 3
         System.out.println("\n");
         System.out.println("length of string is " + findStringLength("amit", 0));
+
+        //problem 4
+        System.out.println(countSubstring("abcab"));
+        printAndCount("abcab");
     }
 }
